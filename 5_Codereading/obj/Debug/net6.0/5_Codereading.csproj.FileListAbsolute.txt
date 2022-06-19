@@ -1,0 +1,15 @@
+C:\Language\CSharp\5_Codereading\bin\Debug\net6.0\5_Codereading.exe
+C:\Language\CSharp\5_Codereading\bin\Debug\net6.0\5_Codereading.deps.json
+C:\Language\CSharp\5_Codereading\bin\Debug\net6.0\5_Codereading.runtimeconfig.json
+C:\Language\CSharp\5_Codereading\bin\Debug\net6.0\5_Codereading.dll
+C:\Language\CSharp\5_Codereading\bin\Debug\net6.0\5_Codereading.pdb
+C:\Language\CSharp\5_Codereading\obj\Debug\net6.0\5_Codereading.csproj.AssemblyReference.cache
+C:\Language\CSharp\5_Codereading\obj\Debug\net6.0\5_Codereading.GeneratedMSBuildEditorConfig.editorconfig
+C:\Language\CSharp\5_Codereading\obj\Debug\net6.0\5_Codereading.AssemblyInfoInputs.cache
+C:\Language\CSharp\5_Codereading\obj\Debug\net6.0\5_Codereading.AssemblyInfo.cs
+C:\Language\CSharp\5_Codereading\obj\Debug\net6.0\5_Codereading.csproj.CoreCompileInputs.cache
+C:\Language\CSharp\5_Codereading\obj\Debug\net6.0\5_Codereading.dll
+C:\Language\CSharp\5_Codereading\obj\Debug\net6.0\refint\5_Codereading.dll
+C:\Language\CSharp\5_Codereading\obj\Debug\net6.0\5_Codereading.pdb
+C:\Language\CSharp\5_Codereading\obj\Debug\net6.0\5_Codereading.genruntimeconfig.cache
+C:\Language\CSharp\5_Codereading\obj\Debug\net6.0\ref\5_Codereading.dll
