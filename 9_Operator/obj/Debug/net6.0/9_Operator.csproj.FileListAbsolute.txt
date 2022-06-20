@@ -1,0 +1,15 @@
+C:\Language\CSharp\9_Operator\bin\Debug\net6.0\9_Operator.exe
+C:\Language\CSharp\9_Operator\bin\Debug\net6.0\9_Operator.deps.json
+C:\Language\CSharp\9_Operator\bin\Debug\net6.0\9_Operator.runtimeconfig.json
+C:\Language\CSharp\9_Operator\bin\Debug\net6.0\9_Operator.dll
+C:\Language\CSharp\9_Operator\bin\Debug\net6.0\9_Operator.pdb
+C:\Language\CSharp\9_Operator\obj\Debug\net6.0\9_Operator.csproj.AssemblyReference.cache
+C:\Language\CSharp\9_Operator\obj\Debug\net6.0\9_Operator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Language\CSharp\9_Operator\obj\Debug\net6.0\9_Operator.AssemblyInfoInputs.cache
+C:\Language\CSharp\9_Operator\obj\Debug\net6.0\9_Operator.AssemblyInfo.cs
+C:\Language\CSharp\9_Operator\obj\Debug\net6.0\9_Operator.csproj.CoreCompileInputs.cache
+C:\Language\CSharp\9_Operator\obj\Debug\net6.0\9_Operator.dll
+C:\Language\CSharp\9_Operator\obj\Debug\net6.0\refint\9_Operator.dll
+C:\Language\CSharp\9_Operator\obj\Debug\net6.0\9_Operator.pdb
+C:\Language\CSharp\9_Operator\obj\Debug\net6.0\9_Operator.genruntimeconfig.cache
+C:\Language\CSharp\9_Operator\obj\Debug\net6.0\ref\9_Operator.dll
