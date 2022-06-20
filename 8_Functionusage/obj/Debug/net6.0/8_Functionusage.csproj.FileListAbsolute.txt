@@ -1,0 +1,15 @@
+C:\Language\CSharp\8_Functionusage\bin\Debug\net6.0\8_Functionusage.exe
+C:\Language\CSharp\8_Functionusage\bin\Debug\net6.0\8_Functionusage.deps.json
+C:\Language\CSharp\8_Functionusage\bin\Debug\net6.0\8_Functionusage.runtimeconfig.json
+C:\Language\CSharp\8_Functionusage\bin\Debug\net6.0\8_Functionusage.dll
+C:\Language\CSharp\8_Functionusage\bin\Debug\net6.0\8_Functionusage.pdb
+C:\Language\CSharp\8_Functionusage\obj\Debug\net6.0\8_Functionusage.csproj.AssemblyReference.cache
+C:\Language\CSharp\8_Functionusage\obj\Debug\net6.0\8_Functionusage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Language\CSharp\8_Functionusage\obj\Debug\net6.0\8_Functionusage.AssemblyInfoInputs.cache
+C:\Language\CSharp\8_Functionusage\obj\Debug\net6.0\8_Functionusage.AssemblyInfo.cs
+C:\Language\CSharp\8_Functionusage\obj\Debug\net6.0\8_Functionusage.csproj.CoreCompileInputs.cache
+C:\Language\CSharp\8_Functionusage\obj\Debug\net6.0\8_Functionusage.dll
+C:\Language\CSharp\8_Functionusage\obj\Debug\net6.0\refint\8_Functionusage.dll
+C:\Language\CSharp\8_Functionusage\obj\Debug\net6.0\8_Functionusage.pdb
+C:\Language\CSharp\8_Functionusage\obj\Debug\net6.0\8_Functionusage.genruntimeconfig.cache
+C:\Language\CSharp\8_Functionusage\obj\Debug\net6.0\ref\8_Functionusage.dll
