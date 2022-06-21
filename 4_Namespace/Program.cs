@@ -1,5 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console
 
 /* Namespace는 개념의 표현이라기보다는 개념의 분류임
 어떠한 코드들을 어떠한 이름으로 분류한다는 의미
