@@ -17,6 +17,16 @@
 // 다운캐스팅은 최대한 지양하는 것이 좋음
 // 다운캐스팅을 하다 보면 실수로 플레이어를 몬스터로 변경할 수도 있게 됨
 
+// 생성자는 class가 만들어질 때 한 번 실행해주는 함수임 (처음 인스턴스를 만들 때 메모리를 할당하는 함수)
+// 특징으로는 리턴값이 없음 (만약 값을 리턴한다고 생각하면 Player NewPlayer = new Player();은 말이 안 됨)
+// 무조건 자신의 클래스의 메모리를 리턴해주는 함수여야 함
+// public Player() {}
+// 만들지 않아도 눈에 보이지 않지만 이 함수는 만들어짐
+// 멤버변수나 멤버함수와는 다르게 생성자는 기본적으로 Public임 (물론 이건 생략했을 때이고 만약 적는다면 private으로 적용됨)
+
+// FightUnit이 먼저 만들어지고 Player가 만들어짐
+// https://hevton.tistory.com/335
+
 class FightUnit
 {
     protected string Name = "None";
@@ -44,6 +54,13 @@ class FightUnit
 
 class Player : FightUnit
 {
+    FightUnit.HP;
+    this.HP
+    public Player()
+    {
+        Name = "플레이어";
+    }
+
     public void Heal()
     {
         if (HP < MAXHP)
@@ -57,12 +74,17 @@ class Player : FightUnit
             Console.ReadKey();
         }
 
+
         return;
     }
 }
 
 class Monster : FightUnit
 {
+    public Monster(string _Name)
+    {
+        Name = _Name;
+    }
 
 }
 
@@ -151,14 +173,16 @@ namespace TextRPG
 
             // Console.WriteLine("");
 
-            Monster NewMonster = new Monster();
+            Monster NewMonster = new Monster("오크");
 
-            while (true) // 몬스터와 플레이어 둘 중 누가 죽을 때까지
+            while (true) // 몬스터와 플레이어 둘 중 누가 죽을 때까지 싸우게, 한 쪽이 죽으면 마을로 자동이송
             {
                 Console.Clear();
                 _Player.StatusRender();
                 NewMonster.StatusRender();
                 Console.ReadKey();
+
+
             }
         }
 
