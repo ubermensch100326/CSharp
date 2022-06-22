@@ -13,6 +13,10 @@
 // 그렇지만 넣게 되면 FightUnit 이외의 고유한 Player 부분과 Monster 부분은 버리는 셈임
 // 이러한 자식의 능력을 버리는 것을 업캐스팅이라고 함 (자식형이 부모형이 되는 것)
 
+// i/o 디버깅 오류 나면 launch.json "console": "externalTerminal",로 수정
+
+// vscode 인텔리센스 한글로 뜰 때 : https://github.com/OmniSharp/omnisharp-vscode/issues/2513
+
 // 다운캐스팅은 반대로 FightUnit이지만 Player나 Monster의 기능을 쓰는 것을 말함
 // 다운캐스팅은 최대한 지양하는 것이 좋음
 // 다운캐스팅을 하다 보면 실수로 플레이어를 몬스터로 변경할 수도 있게 됨
@@ -49,13 +53,20 @@ class FightUnit
         Console.WriteLine("------------------------------");
     }
 
+    public void Fight(FightUnit _FightUnit)
+    {
+        this.HP -= _FightUnit.AT;
+    }
+
+    public bool IsDeath()
+    {
+        return HP <= 0;
+    }
 }
 
 
 class Player : FightUnit
 {
-    FightUnit.HP;
-    this.HP
     public Player()
     {
         Name = "플레이어";
@@ -66,6 +77,7 @@ class Player : FightUnit
         if (HP < MAXHP)
         {
             HP += 10;
+            StatusRender();
         }
         else
         {
@@ -152,7 +164,6 @@ namespace TextRPG
                 {
                     case ConsoleKey.D1:
                         _Player.Heal();
-                        _Player.StatusRender();
                         break;
                     case ConsoleKey.D2:
                         break;
@@ -165,7 +176,7 @@ namespace TextRPG
 
         }
 
-        static void Battle(Player _Player)
+        static STARTSELECT Battle(Player _Player)
         {
             // Console.Clear();
             // Console.WriteLine("아직 개장하지 않았습니다.");
@@ -175,15 +186,25 @@ namespace TextRPG
 
             Monster NewMonster = new Monster("오크");
 
-            while (true) // 몬스터와 플레이어 둘 중 누가 죽을 때까지 싸우게, 한 쪽이 죽으면 마을로 자동이송
+            while (!(_Player.IsDeath()) && !(NewMonster.IsDeath())) // 몬스터와 플레이어 둘 중 누가 죽을 때까지 싸우게, 한 쪽이 죽으면 마을로 자동이송
             {
                 Console.Clear();
                 _Player.StatusRender();
                 NewMonster.StatusRender();
                 Console.ReadKey();
 
-
+                Console.Clear();
+                _Player.Fight(NewMonster); // 원래 각각에 대해 조건문으로 확인해야 하지만 이건 추후에 함
+                NewMonster.Fight(_Player);
+                _Player.StatusRender();
+                NewMonster.StatusRender();
+                Console.ReadKey();
             }
+
+            Console.WriteLine("싸움이 끝났습니다.");
+            Console.ReadKey();
+
+            return STARTSELECT.TownSelect;
         }
 
         static void Main(string[] args)
@@ -203,11 +224,15 @@ namespace TextRPG
 
                 switch (SelectCheck) // NonSelect는 넣을 필요가 없음 (재입력 시켜야 하기 때문)
                 {
+
                     case STARTSELECT.TownSelect:
                         Town(NewPlayer);
                         break;
                     case STARTSELECT.BattleSelect:
                         Battle(NewPlayer);
+                        Town(NewPlayer);
+                        break;
+                    default:
                         break;
                 }
             }
