@@ -1,5 +1,14 @@
 class Player : FightUnit
 {
+    Inven PlayerInven = new Inven(2, 3);
+
+    public Inven P_Inven
+    {
+        get
+        {
+            return PlayerInven;
+        }
+    }
     public Player()
     {
         Name = "플레이어";

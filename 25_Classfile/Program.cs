@@ -60,7 +60,6 @@ namespace TextRPG
             // {
             //     ConsoleKeyInfo KeyInfo = Console.ReadKey();
             //     Console.WriteLine(KeyInfo.Key);
-
             // }
 
             Player NewPlayer = new Player();

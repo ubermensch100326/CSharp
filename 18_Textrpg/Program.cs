@@ -176,7 +176,7 @@ namespace TextRPG
 
         }
 
-        static STARTSELECT Battle(Player _Player)
+        static void Battle(Player _Player)
         {
             // Console.Clear();
             // Console.WriteLine("아직 개장하지 않았습니다.");
@@ -203,8 +203,9 @@ namespace TextRPG
 
             Console.WriteLine("싸움이 끝났습니다.");
             Console.ReadKey();
+            return;
 
-            return STARTSELECT.TownSelect;
+            // return STARTSELECT.TownSelect; 필요없는 듯
         }
 
         static void Main(string[] args)
