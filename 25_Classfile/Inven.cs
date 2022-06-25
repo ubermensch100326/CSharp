@@ -1,5 +1,13 @@
 class Inven
 {
+    public enum InvenDir
+    {
+        ID_Left,
+        ID_Right,
+        ID_Up,
+        ID_Down,
+    }
+
     Item[] ArrItem;
     int ItemX;
     int ItemY;
