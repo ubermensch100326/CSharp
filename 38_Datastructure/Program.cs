@@ -23,44 +23,89 @@
 //     }
 // }
 
-class Item
-{
+// class Item
+// {
 
-}
+// }
 
-class MyList<T>
+// class MyList<T>
+// {
+//     T[] Arr = new T[0];
+//     int Capacity = 0;
+//     int Count = 0;
+//     public void Add(T _Add)
+//     {
+//         if (Count + 1 >= Capacity)
+//         {
+
+//         }
+//     }
+// }
+// namespace List
+// {
+//     class Program
+//     {
+//         static void Main(string[] args)
+//         {
+//             List<int> IntList = new List<int>(); // 배열형 시퀀스
+//             List<Item> ItemList = new List<Item>();
+
+//             for (int i = 0; i < 20; i++)
+//             {
+//                 Console.WriteLine("Capacity : " + IntList.Capacity); // 배열의 크기
+//                 Console.WriteLine("Count : " + IntList.Count()); // 자료의 크기
+//                 IntList.Add(i);
+//             }
+
+//             MyList<int> NewInt = new MyList<int>();
+//             NewInt.Add(100);
+
+
+//         }
+//     }
+// }
+
+
+class Node<T>
 {
-    T[] Arr = new T[0];
-    int Capacity = 0;
-    int Count = 0;
-    public void Add(T _Add)
+    public T Data;
+    // node란 자신 안에 자기자신을 또 가지는 형태로 되어있는 클래스들을 노드라고 함
+    public Node<T> Next = null;
+    public Node<T> Prev = null;
+
+    public Node(T _Data)
     {
-        if (Count + 1 >= Capacity)
-        {
-            
-        }
+        Data = _Data;
     }
 }
-namespace List
+
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        Node<int> Node1 = new Node<int>(10);
+        Node<int> Node2 = new Node<int>(999);
+        Node<int> Node3 = new Node<int>(5948321);
+
+        Node1.Next = Node2;
+        Node2.Next = Node3;
+
+        Node3.Prev = Node2;
+        Node2.Prev = Node1;
+
+        Node<int> CurNode = Node1;
+
+        Node<int> RCurNode = Node3;
+
+        while (CurNode != null)
         {
-            List<int> IntList = new List<int>(); // 배열형 시퀀스
-            List<Item> ItemList = new List<Item>();
-
-            for (int i = 0; i < 20; i++)
-            {
-                Console.WriteLine("Capacity : " + IntList.Capacity); // 배열의 크기
-                Console.WriteLine("Count : " + IntList.Count()); // 자료의 크기
-                IntList.Add(i);
-            }
-
-            MyList<int> NewInt = new MyList<int>();
-            NewInt.Add(100);
-
-
+            Console.WriteLine(CurNode.Data);
+            CurNode = CurNode.Next;
         }
+
+        LinkedList<int> LList = new LinkedList<int>();
+        LList.AddFirst(10);
+        LList.AddFirst(20);
+        LList.AddFirst(30);
     }
 }
