@@ -58,6 +58,12 @@ class Zone
                 Console.WriteLine((i + 1).ToString() + ". " + LinkZone[i].Name);
             }
 
+
+            int Number = (int)Console.ReadKey().Key;
+            Number -= 49;
+
+            return LinkZone[Number];
+
         }
     }
     public Zone(string _Name)
@@ -82,12 +88,19 @@ namespace NodeEx
             NewZone0.LinkZone.Add(NewZone2);
 
             NewZone1.LinkZone.Add(NewZone3);
+            NewZone1.LinkZone.Add(NewZone0); // 초보마을에서 다시 태초마을로
 
             NewZone2.LinkZone.Add(NewZone3);
 
             NewZone3.LinkZone.Add(NewZone4);
 
             Zone StartZone = NewZone0;
+
+            while (true)
+            {
+                StartZone = StartZone.Update();
+            }
+
         }
     }
 }
